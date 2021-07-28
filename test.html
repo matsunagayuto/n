@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+</head>
+<style>
+
+  body{
+    height:100vh;
+    width:100%;
+    margin:0;
+  }
+  .fastpage{
+    font-size: 50px;
+    font-family: cursive;
+    text-align: center;
+  }
+  .fastpage{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   font-family: 'Courier New', Courier, monospace;
+  }
+  .moji{
+    opacity: 0; /* ←初期値を変更。透明に。*/
+      animation: 1s fadeIn forwards; /* ←追加 */
+
+  }
+  @keyframes fadeIn { /* ←追加 */
+    from { opacity: 0; }
+    to { opacity: 0.9; }
+  }
+
+  .page2{
+    display:none;
+  }
+  .page3{
+    display:none;
+  }
+
+  .bar{
+    animation:0.3s side forwards;
+    background-color: black;
+    width:100%;
+    height:100px;
+    position: fixed;
+    z-index: 3;
+  }
+  @keyframes side{
+    0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-1%);
+  }
+  }
+  .bar p{
+    animation:1s fade forwards;
+    color:white;
+    font-family: cursive;
+    font-size: 60px;
+    text-align: center;
+  }
+  @keyframes fade{
+    0%{
+      margin-top: 50px;
+      opacity: 0;
+    }
+    100%{
+      margin-top: 0;
+      opacity:1;
+    }
+  }
+  .content{
+    display:flex;
+  }
+
+  .content0{
+    width:33.3%;
+    height:80px;
+   box-shadow: 10px 10px 10px rgba(0,0,0,0.6);
+   font-family: cursive;
+   text-align: center;
+
+
+  }
+  .content a{
+    text-decoration:none;
+    font-size:40px;
+    text-align: center;
+    margin-top: 0px;
+    color:black
+  }
+  .box{
+    height:100px;
+    width:100%;
+  }
+.fa{
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 100% 100%;
+    text-align: center;
+    margin-left:8%;
+    margin-top:5%;
+    opacity: 0.8;
+    grid-column-gap: 2%;
+    grid-row-gap: 20%;
+      text-align: center;
+}
+.fa0{
+  background-color: rgb(255, 255, 255)
+  border:inset 10px;
+  border-color:black;
+  font-family:cursive;
+  box-shadow:3px 3px 3px rgba(0,0,0,0.6);
+}
+
+.fa0 img{
+  object-fit: cover;
+   width:100%;
+}
+.title p{
+  font-size: 45px;
+  text-align: center;
+  font-family: cursive;
+}
+.fas{
+  margin-top: 30%;
+}
+.suraido img{
+  position: absolute;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    animation :slideshow 9s linear infinite;
+    object-fit: cover;
+    height:60vw;
+  }
+
+
+
+
+
+  @keyframes slideshow{
+    0%{
+      opacity: 0;
+    }
+    10%{
+      opacity: 1;
+    }
+    28%{
+      opacity: 1
+    }
+    38%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+  .suraido img:nth-child(2){
+  animation-delay: 3s;
+}
+
+.suraido img:last-child{
+  animation-delay: 6s;
+}
+.box2{
+  height: 50%;
+  width:100%;
+}
+.suraido{
+  position: relative;
+  height:60vw;
+}
+.futtar{
+  height:200px;
+  width:100vw;
+  background-color:black;
+}
+.f0{
+  width:15%;
+  height:100%;
+  display: inline-block;
+
+}
+.futtar img{
+  width:100vw;
+
+}
+
+
+
+</style>
+<body>
+<div id="page1"class="page1 fastpage" onclick="pagechange()">
+  <p class ="moji">absolute</p>
+</div>
+<div id="page2" class="page2 fastpage" onclick="pagechange2()">
+  <p class="moji">REINI</p>
+</div>
+<div class="page3" id="page3">
+
+  <div class="bar">
+    <p>arigatou</p>
+  </div>
+  <div class="box"></div>
+  <div class="content">
+    <div class="content1 content0">
+      <a href="file:///Users/matsunagayuuto/Desktop/%E9%A0%91%E5%BC%B5%E3%82%8B%E3%81%9D%E3%82%99%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB/test_2.html">concept</a>
+
+    </div>
+    <div class="content2 content0">
+     <a href="file:///Users/matsunagayuuto/Desktop/%E9%A0%91%E5%BC%B5%E3%82%8B%E3%81%9D%E3%82%99%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB/test_3.html">contact</a>
+
+    </div>
+    <div class="content3 content0">
+      <a href="yahoo.co.jp">sns</a>
+
+    </div>
+  </div>
+  <div class="box2"></div>
+  <div class="title">
+    <p>lineup</p>
+  </div>
+  <div class="fa ">
+    <div class="fa1 fa0">
+      <img src="tshatu.png">
+      <p>aaa</p>
+    </div>
+    <div class="fa2 fa0">
+      <img src="tshatu.png">
+      <p>bbb</p>
+    </div>
+    <div class="fa3 fa0">
+      <img src="tshatu.png">
+      <p>ccc</p>
+    </div>
+
+    </div>
+  <div class="fa fas">
+    <div class="fa1 fa0">
+      <img src="tshatu.png">
+      <p>aaa</p>
+    </div>
+    <div class="fa2 fa0">
+      <img src="tshatu.png">
+      <p>bbb</p>
+    </div>
+    <div class="fa3 fa0">
+      <img src="tshatu.png">
+      <p>ccc</p>
+    </div>
+
+    </div>
+    <div class="suraido">
+      <img src="unnamed.jpg">
+      <img src="download.jpg">
+      <img src="download-1.jpg">
+    </div>
+    <div class="futtar">
+      <img src="sns.png">
+    </div>
+  </div>
+  <div class="watasi">/<iv>
+
+<script>
+const page1 = document.getElementById( "page1" )
+const page2 = document.getElementById( "page2" )
+const page3 = document.getElementById( "page3" )
+  function pagechange(){
+    console.log("test")
+    page1.style.display="none";
+    page2.style.display="flex";
+  }
+   function pagechange2(){
+     console.log("test2")
+     page2.style.display="none";
+     page3.style.display="block"
+   }
+</script>
+</body>
+</html>
